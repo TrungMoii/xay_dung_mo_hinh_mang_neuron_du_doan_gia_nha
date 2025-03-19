@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dự đoán giá nhà</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dự đoán giá nhà</h1>
+        <form method="post">
+            <label for="year_sold">Năm bán nhà:</label>
+            <input type="number" name="year_sold" required>
+
+            <label for="house_age">Tuổi nhà:</label>
+            <input type="number" name="house_age" required>
+
+            <label for="distance">Khoảng cách đến trung tâm:</label>
+            <input type="number" name="distance" required>
+
+            <label for="num_shops">Số cửa hàng gần đó:</label>
+            <input type="number" name="num_shops" required>
+
+            <label for="longitude">Kinh độ:</label>
+            <input type="number" name="longitude" step="0.01" required>
+
+            <label for="latitude">Vĩ độ:</label>
+            <input type="number" name="latitude" step="0.01" required>
+
+            <button type="submit">Dự đoán</button>
+        </form>
+
+        {% if price_min and price_max %}
+            <p><b>Giá nhà dự đoán:</b> {{ price_min }} VNĐ - {{ price_max }} VNĐ</p>
+        {% elif error %}
+            <h2 class="error">{{ error }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
