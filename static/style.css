@@ -1,0 +1,116 @@
+/* Reset mặc định của trình duyệt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Nền gradient xanh nhẹ */
+body {
+    background: linear-gradient(to right, #cee9ff, #d4dfff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Card chứa nội dung */
+.container {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(132, 130, 255, 0.2);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Tiêu đề */
+h1 {
+    font-family: "Dongle", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #1976D2;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Label */
+label {
+    font-family: "Dongle", sans-serif;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    color: #34547e;
+}
+
+/* Input */
+input {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+input:focus {
+    border-color: #42a5f5;
+    box-shadow: 0px 0px 8px rgba(33, 150, 243, 0.5);
+    outline: none;
+}
+
+/* Nút bấm */
+button {
+    font-family: "Dongle", sans-serif;
+    font-size: 30px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #1565C0;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #1e88e5;
+}
+
+/* Kết quả dự đoán */
+.result {
+    font-family: "Dongle", sans-serif;
+    background: #f1f8e9;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #2e7d32;
+}
+
+/* Hiển thị lỗi */
+.error {
+    color: red;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+}
